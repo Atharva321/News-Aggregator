@@ -1,0 +1,59 @@
+{
+  "erase": "Erase",
+  "confirm": "Confirm",
+  "delete": "Delete",
+  "hangfire": {
+    "list": "Jobs",
+    "job": "Job",
+    "state": "State",
+    "createdAt": "Created at",
+    "invocationData": "Invocation data",
+    "states": "States",
+    "stateName": "State",
+    "stateReason": "Reason",
+    "launchArticlesExtraction": "Extract articles",
+    "launchRecommendationExtraction": "Extract recommendation"
+  },
+  "feed": {
+    "add": "Add feed",
+    "list": "Feeds",
+    "delete": "Delete feeds",
+    "title": "Feed title",
+    "feedAdded": "Feed has been added",
+    "feedRemoved": "Feed has been removed",
+    "feedSourcesRemoved": "Selected feeds have been removed",
+    "moreThan1000Followers": "> 1000 followers",
+    "moreThan100AndLessThan1000Followers": "<= 1000 followers && >= 100 followers",
+    "lessThan100Followers": "< 100 followers",
+    "moreThan1000Stories": "> 1000 stories",
+    "moreThan100AndLessThan1000Stories": "<= 1000 stories && >= 100 stories",
+    "lessThan100Stories": "< 100 stories"
+  },
+  "article": {
+    "publicationDate": "Publish : {{date}}",
+    "actions": {
+      "read": "Mark as read",
+      "unread": "Mark as unread",
+      "like": "Like",
+      "dislike": "Dislike",
+      "readLater": "Read later",
+      "readAndHide": "Read and hide"
+    }
+  },
+  "recommendation": {
+    "list": "Recommendations"
+  },
+  "datasource": {
+    "list": "Datasources",
+    "searchDatasource": "Search datasource",
+    "followers": "{{nbFollowers}} followers",
+    "nbStoriesPerMonth": "{{nbStoriesPerMonth}} articles per week"
+  },
+  "status": {
+    "notfound": "Page not found"
+  },
+  "menu": {
+    "authenticate": "Authenticate",
+    "disconnect": "Disconnect"
+  }
+}
