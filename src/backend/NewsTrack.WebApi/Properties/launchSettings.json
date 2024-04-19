@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "NewsTrack.WebApi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "health",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5162/"
+    }
+  }
+}

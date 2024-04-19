@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NEST" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NewsTrack.Domain\NewsTrack.Domain.csproj" />
+    <ProjectReference Include="..\NewsTrack.Identity\NewsTrack.Identity.csproj" />
+  </ItemGroup>
+
+</Project>

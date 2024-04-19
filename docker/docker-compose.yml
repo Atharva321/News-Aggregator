@@ -1,0 +1,52 @@
+version: '3.3'
+services:
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.0
+    container_name: es
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - xpack.security.enabled=false
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks:
+      - elastic
+    
+  news-track-back:
+    depends_on: [es]
+    build: ../src/backend
+    container_name: back
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
+    ports:
+      - 8890:80
+    volumes:
+      - ./backend-logs:/app/logs
+      - ./backend-outbox:/app/outbox
+    networks:
+      - elastic
+      
+  news-track-front:
+    depends_on: [news-track-back]
+    build: ../src/frontend
+    container_name: front
+    ports:
+      - 8080:80
+    networks:
+      - elastic      
+
+volumes:
+  data:
+    driver: local
+
+networks:
+  elastic:
+    driver: bridge
